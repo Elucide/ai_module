@@ -9,6 +9,14 @@ class mlp:
     def __init__(self, nn_layers: list[mlp_layers.mlp_layer]):
         self.layers = nn_layers
         print("Neural network created !")
-        print("it's layers are:", self.layers)
+        for layer in self.layers:
+            print(layer)
+    
+    def print_layers(self, n : int = 0):
+        if n:
+            print (str(self.layers[n]))
+        else:
+            for layer in self.layers:
+                print (str(layer))
 
         
