@@ -57,6 +57,7 @@ class mlp_layer:
         #init the weights !
         self.weights = self.weight_initializer(len(self.weights))
 
+
     def __getitem__(self, index):
         return self.weights[index]
 

@@ -7,5 +7,8 @@ model = mlp.mlp([
     mlp.mlp_layers.mlp_layer(5, activation="sigmoid", weight_initializer="uniform")
 ])
 
+print("\n TESTING INSTANCIATION FROM CSV !")
+model2 = mlp.mlp(source="data.csv")
+
 print("\n TESTING PRINTING METHOD !")
-model.print_layers()
+model.print_layers(1)
