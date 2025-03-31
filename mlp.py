@@ -4,10 +4,17 @@ import mlp_layers
 class mlp:
     """
         MULTILAYER PERCEPTRON SUPER COOL CLASS !!!
-    """
 
+        can be instatianted with :
+            "mlp my_new_mlp(<nn_layers>, <source>)"
     
-    def print_layers(self, n : int = 0):
+                (-) <nn_layers> a list containing the layers of the neural network
+                (-) <source> a string containing a path to the csv used to instanciate the layers
+
+            only one argument should be passed to the object constructor
+    """
+    
+    def monitor(self, n : int = 0):
         if n:
             print (str(self.layers[n]))
         else:
@@ -29,3 +36,11 @@ class mlp:
         print("Neural network created !")
         for layer in self.layers:
             print(layer)
+
+
+    def print_layers(self, index = None):
+        if (index == None):
+            for layers in self.layers:
+                layers.monitor()
+        else:
+            self.layers[index].monitor()

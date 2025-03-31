@@ -6,6 +6,10 @@ class mlp_layer:
         MLP LAYER SUPER COOL CLASS
     """
 
+    def monitor(self):
+        for i in range(self.len()):
+            print(self[i])
+
     def _relu(self, x):
         return np.maximum(0, x)
 
@@ -67,3 +71,6 @@ class mlp_layer:
     def __str__(self):
         out_str = "weights are: "+ str(self.weights)+ "\nbias are: "+ str(self.bias)
         return (out_str)
+
+    def len(self):
+        return (len(self.weights))
