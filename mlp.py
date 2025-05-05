@@ -1,5 +1,6 @@
 import numpy as np
 import mlp_layers
+from dataset import dataset
 
 class mlp:
     """
@@ -44,3 +45,7 @@ class mlp:
                 layers.monitor()
         else:
             self.layers[index].monitor()
+
+    def import_dataset(self, csv : str = "data.csv"):
+        self.data = dataset()
+        self.data.get_csv(csv_file = csv)

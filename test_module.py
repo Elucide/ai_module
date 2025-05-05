@@ -12,3 +12,5 @@ model2 = mlp.mlp(source="data.csv")
 
 print("\n TESTING PRINTING METHOD !")
 model.print_layers(1)
+
+model.import_dataset()
